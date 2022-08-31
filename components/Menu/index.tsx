@@ -1,25 +1,33 @@
 import { Menu } from "antd";
 import React from "react";
-import { AreaChartOutlined } from '@ant-design/icons';
+import { AreaChartOutlined, LogoutOutlined } from "@ant-design/icons";
+import styles from "./menu.module.less";
+import logo from '@/assets/logo';
 
 const SideMenu = () => {
   const onClick = (e: any) => {
     console.log("click ", e);
   };
 
-  const items = [
-    { key: 'item-1', icon: <AreaChartOutlined /> },
-  ];
+  const items = [{ key: "chart", icon: <AreaChartOutlined /> }];
 
   return (
-    <Menu
-      onClick={onClick}
-      style={{ width: 60 }}
-      defaultSelectedKeys={['1']}
-      mode="inline"
-      inlineCollapsed={true}
-      items={items}
-    />
+    <div className={styles.sideMenu}>
+      <div className={styles.avatar}>
+        <img src={logo} alt="" />
+      </div>
+      <Menu
+        onClick={onClick}
+        style={{ width: 60 }}
+        defaultSelectedKeys={["chart"]}
+        mode="inline"
+        inlineCollapsed={true}
+        items={items}
+      />
+      <div className={styles.logout}>
+        <LogoutOutlined />
+      </div>
+    </div>
   );
 };
 
