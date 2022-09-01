@@ -46,8 +46,8 @@ const Home: NextPage = () => {
           <Col className="gutter-row" span={6}>
             <Rank
               ranklists={[
-                { title: "最热门课程top10", data: hotCourseList },
-                { title: "完播课程top10", data: cmpltCourseList },
+                { title: "最热门课程 TOP10", data: hotCourseList },
+                { title: "完播课程 TOP10", data: cmpltCourseList },
               ]}
             />
           </Col>
