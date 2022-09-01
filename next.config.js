@@ -6,5 +6,4 @@ const nextConfig = {
   swcMinify: true,
 };
 
-// module.exports = nextConfig;
 module.exports = withAntdLess(nextConfig);
